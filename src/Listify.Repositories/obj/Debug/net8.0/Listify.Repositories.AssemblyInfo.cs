@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Listify.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36c45fe5b60ee492bfd827f1a04edc56610e0ae1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0095a491dcee5e089250617bcc2252ff1c78eeb4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Listify.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Listify.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
