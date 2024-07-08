@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "O1lxkXzxF1A=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\migue\\source\\repos\\ListifyApp\\Listify.Repositories\\Listify.Repositories.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\migue\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
