@@ -13,3 +13,5 @@
 /src/Listify.Repositories/obj/Release/net8.0/
 /src/Listify.UI/obj/Debug/net8.0-windows/
 /src/Listify.UI/obj/Release/net8.0-windows/
+/src/Listify.UI/bin/Debug/logs/logger20240708.log
+/src/Listify.UI/bin/Debug/repo/combinations.txt
