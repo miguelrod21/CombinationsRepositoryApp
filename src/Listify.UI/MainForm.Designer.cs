@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            combinationslvw = new ListView();
             SuspendLayout();
+            // 
+            // combinationslvw
+            // 
+            combinationslvw.Location = new Point(12, 89);
+            combinationslvw.Name = "combinationslvw";
+            combinationslvw.Size = new Size(255, 317);
+            combinationslvw.TabIndex = 0;
+            combinationslvw.UseCompatibleStateImageBehavior = false;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(combinationslvw);
             Name = "MainForm";
             Text = "Listify App";
             Load += MainForm_Load;
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private ListView combinationslvw;
     }
 }
