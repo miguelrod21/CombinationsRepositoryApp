@@ -21,3 +21,15 @@ C:\Users\migue\Source\Repos\miguelrod21\ListifyRepositoryApp\Listify.Models\obj\
 C:\Users\migue\Source\Repos\miguelrod21\ListifyRepositoryApp\Listify.Models\obj\Debug\net8.0\refint\Listify.Models.dll
 C:\Users\migue\Source\Repos\miguelrod21\ListifyRepositoryApp\Listify.Models\obj\Debug\net8.0\Listify.Models.pdb
 C:\Users\migue\Source\Repos\miguelrod21\ListifyRepositoryApp\Listify.Models\obj\Debug\net8.0\ref\Listify.Models.dll
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\bin\Debug\net8.0\Listify.Models.deps.json
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\bin\Debug\net8.0\Listify.Models.dll
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\bin\Debug\net8.0\Listify.Models.pdb
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.AssemblyInfoInputs.cache
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.AssemblyInfo.cs
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.csproj.CoreCompileInputs.cache
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.sourcelink.json
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.dll
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\refint\Listify.Models.dll
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\Listify.Models.pdb
+C:\Users\migue\source\repos\ListifyRepositoryApp\src\Listify.Models\obj\Debug\net8.0\ref\Listify.Models.dll

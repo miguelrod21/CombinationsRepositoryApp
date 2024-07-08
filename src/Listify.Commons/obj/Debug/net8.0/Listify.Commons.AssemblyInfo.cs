@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Listify.Commons")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36c45fe5b60ee492bfd827f1a04edc56610e0ae1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d981ecd58b8cb5512450216da63477e51788a3a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Listify.Commons")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Listify.Commons")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
