@@ -12,55 +12,101 @@ namespace Listify.Integration.Lottery
         {
             _repository = repository;
         }
-
-        public List<CombinationDto> GetAll()
+        public List<CombinationDto>? GetAllChecked()
         {
-            string path = "../repo/combinations.txt";
-            if (File.Exists(path))
-            {
-                string data = File.ReadAllText(path);
-                var deserialized = JsonSerializer.Deserialize<List<CombinationDto>>(data);
-                return deserialized.ToList();
-            }
-            else
-            {
-                var combinations = _repository.GetAll();
-                //SaveCombinationsFormattedFile(combinations, path);
-                SaveCombinationsFile(combinations, path);
+            List<CombinationDto>? checkCombinations = new();
+            checkCombinations = _repository.GetAllChecked();
+            return checkCombinations;
+        }
+        public List<CombinationDto>? GetAll()
+        {
+            List<CombinationDto>? combinations = new();
+            combinations = _repository.GetAll();
+
+            if (combinations != null)
                 return combinations;
+
+            combinations = new List<CombinationDto>();
+            int[] numeros = new int[49];
+            for (int i = 0; i < 49; i++)
+            {
+                numeros[i] = i + 1;
+            }
+
+            GenerarCombinaciones(numeros, 6, new int[6], 0, 0, combinations);
+            if (combinations != null)
+                _repository.SaveCombinations(combinations);
+            return combinations;
+        }
+        private void GenerarCombinaciones(int[] numeros, int k, int[] combinacionActual, int inicio, int index, List<CombinationDto> combinations)
+        {
+            if (index == k)
+            {
+                combinations.Add(new CombinationDto
+                {
+                    N1 = combinacionActual[0],
+                    N2 = combinacionActual[1],
+                    N3 = combinacionActual[2],
+                    N4 = combinacionActual[3],
+                    N5 = combinacionActual[4],
+                    N6 = combinacionActual[5]
+                });
+                return;
+            }
+
+            for (int i = inicio; i <= numeros.Length - k + index; i++)
+            {
+                combinacionActual[index] = numeros[i];
+                GenerarCombinaciones(numeros, k, combinacionActual, i + 1, index + 1, combinations);
             }
         }
-
-        private void SaveCombinationsFile(List<CombinationDto> combinations, string path)
+        public List<CombinationDto> CalcularCombinaciones()
         {
-            var data = JsonSerializer.Serialize(combinations);
-            File.WriteAllText(path, data);
-        }
-
-        private void SaveCombinationsFormattedFile(List<CombinationDto> combinations, string path)
-        {
-            using (StreamWriter writer = new StreamWriter(path))
+            List<CombinationDto> combinaciones = new List<CombinationDto>();
+            int[] numeros = new int[49];
+            for (int i = 0; i < 49; i++)
             {
-                for (int i = 0; i < combinations.Count; i++)
+                numeros[i] = i + 1;
+            }
+            int[] combinacionActual = new int[6];
+            int index = 0;
+            int inicio = 0;
+
+            while (index >= 0)
+            {
+                if (index == 6)
                 {
-                    CombinationDto combination = combinations[i];
-                    string line = $"Combinacion {i + 1}: {combination.N1} {combination.N2} {combination.N3} {combination.N4} {combination.N5} {combination.N6}";
-                    writer.WriteLine(line);
+                    combinaciones.Add(new CombinationDto
+                    {
+                        N1 = combinacionActual[0],
+                        N2 = combinacionActual[1],
+                        N3 = combinacionActual[2],
+                        N4 = combinacionActual[3],
+                        N5 = combinacionActual[4],
+                        N6 = combinacionActual[5]
+                    });
+                    index--;
+                    inicio++;
+                }
+                else if (inicio >= 49)
+                {
+                    index--;
+                    if (index >= 0)
+                    {
+                        inicio = combinacionActual[index] + 1;
+                    }
+                }
+                else
+                {
+                    combinacionActual[index] = numeros[inicio];
+                    index++;
+                    inicio++;
                 }
             }
+
+            return combinaciones;
         }
 
-        private void SaveCombinationsFormattedExcelFile(List<CombinationDto> combinations, string path)
-        {
-            using (StreamWriter writer = new StreamWriter(path))
-            {
-                for (int i = 0; i < combinations.Count; i++)
-                {
-                    CombinationDto combination = combinations[i];
-                    string line = $"Combinacion {i + 1};{combination.N1};{combination.N2};{combination.N3};{combination.N4};{combination.N5};{combination.N6};";
-                    writer.WriteLine(line);
-                }
-            }
-        }
+       
     }
 }

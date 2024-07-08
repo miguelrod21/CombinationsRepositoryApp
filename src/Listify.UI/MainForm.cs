@@ -13,12 +13,21 @@ namespace ListifyApp
 
             InitializeComponent();
         }
-
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadCombinations();
+            LoadCheckedCombinations();
+        }
         public List<CombinationDto> LoadCombinations()
         {
             var all = _lotteryService.GetAll();
-
             return all;
+        }
+
+        private List<CombinationDto> LoadCheckedCombinations()
+        {
+            var allChecked = _lotteryService.GetAllChecked();
+            return allChecked;
         }
     }
 }
