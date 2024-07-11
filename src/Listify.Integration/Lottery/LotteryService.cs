@@ -35,7 +35,7 @@ namespace Listify.Integration.Lottery
 
             GenerarCombinaciones(numeros, 6, new int[6], 0, 0, combinations);
             if (combinations != null)
-                _repository.SaveCombinations(combinations);
+                _repository.SaveCombinationsFormattedExcelFile(combinations);
             return combinations;
         }
         private void GenerarCombinaciones(int[] numeros, int k, int[] combinacionActual, int inicio, int index, List<CombinationDto> combinations)

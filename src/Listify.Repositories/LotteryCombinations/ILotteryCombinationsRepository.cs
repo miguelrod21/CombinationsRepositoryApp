@@ -7,5 +7,6 @@ namespace Listify.Repositories.LotteryCombinations
         List<CombinationDto>? GetAll();
         List<CombinationDto>? GetAllChecked();
         void SaveCombinations(List<CombinationDto> combinations);
+        void SaveCombinationsFormattedExcelFile(List<CombinationDto> combinations);
     }
 }
